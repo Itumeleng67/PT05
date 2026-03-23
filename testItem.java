@@ -42,12 +42,14 @@ public class testItem
         }
     }
 
-    
+    //Method find item 
     public static int findItem(ArrayList<Item> items, String title)
     {
         for(int i = 0; i < items.size(); i++)
         {
-            if(items.equalsIgnoreCase(title))
+            //use get to  retrive the item object at index i
+            //get title to get the string to compare 
+            if(items.get(i).getTitle().equalsIgnoreCase(title))
             {
                 return i; 
             }      
@@ -62,9 +64,7 @@ public class testItem
             for(int j = 0; j < items.size() - i - 1; j++)
             {
                 //Item temp = items;
-                //arrList[i] = arrList[j];
-                //arrList[j] = temp;
             }
         }
     }
-}
+}                 
