@@ -64,7 +64,7 @@ public class testItem
             for(int j = 0; j < items.size() - i - 1; j++)
             {
                 //Used bubble sorting to sort them by title 
-                if (items.get(i).getTitle().compareToIgnoreCase(items.get(j).getTitle()) > 0)
+                if (items.get(j).getTitle().compareToIgnoreCase(items.get(j + 1).getTitle()) > 0)
                 {
                     Item temp = items.get(j);
                     items.set(j, items.get(j + 1));
