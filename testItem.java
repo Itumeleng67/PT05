@@ -63,7 +63,13 @@ public class testItem
         {
             for(int j = 0; j < items.size() - i - 1; j++)
             {
-                //Item temp = items;
+                //Used bubble sorting to sort them by title 
+                if (items.get(i).getTitle().compareToIgnoreCase(items.get(j).getTitle()) > 0)
+                {
+                    Item temp = items.get(j);
+                    items.set(j, items.get(j + 1));
+                    items.set(j + 1, temp);
+                }
             }
         }
     }
